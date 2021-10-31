@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/SemesterProject.dir/main.cpp.o CMakeFiles/SemesterProject.dir/Wav.cpp.o -o SemesterProject 

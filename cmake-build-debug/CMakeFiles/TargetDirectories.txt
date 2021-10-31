@@ -1,0 +1,3 @@
+/home/jrkre/CLionProjects/SemesterProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/jrkre/CLionProjects/SemesterProject/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/jrkre/CLionProjects/SemesterProject/cmake-build-debug/CMakeFiles/SemesterProject.dir
