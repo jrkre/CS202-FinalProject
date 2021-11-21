@@ -5,7 +5,7 @@
 #define WAVHEADER_H
 
 
-typedef struct wavheader {
+struct wavheader {
     // RIFF Header
     char riff_header[4]; // Contains "RIFF"
     int wav_size; // Size of the wav portion of the file, which follows the first 8 bytes. File size - 8
