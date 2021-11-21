@@ -13,6 +13,7 @@ std::string filename;
 public:
     void readFile(const std::string &filenname);
 
+    unsigned char buffer [];
 };
 
 #endif

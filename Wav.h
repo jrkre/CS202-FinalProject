@@ -6,19 +6,21 @@
 #define WAV_H
 #include <vector>
 #include <iostream>
+#include <fstream>
 #include "wavheader.h"
 
 class Wav {
     std::string filename;
-    wavheader * header;
+    wavheader* header;
 
 
     public:
     
-    &wavheader getHeader()
-    {
-        return &wavheader
-    }
+    void readFile(const std::string &filenname);
+    unsigned char *buffer;
+
+    wavheader& getHeader();
+    
 
 };
 

@@ -1,6 +1,8 @@
 //
 // Created by jrkre on 10/28/21.
 //
+#ifndef WAVHEADER_H
+#define WAVHEADER_H
 
 
 typedef struct wavheader {
@@ -23,4 +25,6 @@ typedef struct wavheader {
     char data_header[4]; // Contains "data"
     int data_bytes; // Number of bytes in data. Number of samples * num_channels * sample byte size
     // uint8_t bytes[]; // Remainder of wave file is bytes
-} wav_header;
+};
+
+#endif
