@@ -1,7 +1,3 @@
-//
-// Created by jrkre on 10/28/21.
-//
-
 #ifndef WAV_H
 #define WAV_H
 #include <vector>
@@ -10,17 +6,39 @@
 #include "wavheader.h"
 
 class Wav {
-    std::string filename;
+    std::string fileName;
     wavheader* header;
 
 
     public:
-    
-    void readFile(const std::string &filenname);
+
+    /**
+     * Default constructor
+     */
+    Wav();
+    /**
+     * Constructor that will instantiate a full Wav class from filename
+     */
+    Wav(const std::string &fileName);
+
     unsigned char *buffer;
+
+    /**
+     * readHeader() will read the contents of the header of the file and return them as a struct
+     */
+    wavheader readHeader(const std::string &fileName);
+    /**
+     * readFile() will read the contents of the file and put them in the buffer.
+     */
+    void readFile(const std::string &fileName);
 
     wavheader& getHeader();
     
+
+    /**
+     * 
+     * 
+     */
 
 };
 
