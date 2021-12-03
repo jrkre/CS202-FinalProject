@@ -1,3 +1,7 @@
+/**
+ * This header file deals with the processing aspects of the project
+ * The processors used on the Wav are normalization, echo, and gain adjustment
+ */
 #ifndef PROCESSOR_H
 #define PROCESSOR_H
 #include "Wav.h"

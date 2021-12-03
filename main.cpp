@@ -3,6 +3,7 @@
 #include "Processor.h"
 
 
+
 //char array *argv is a commandline argument
 // TODO: make file runnable with argv
 /**
@@ -26,12 +27,14 @@ int main(int argc, char *argv[]) {
 		
 		
 		// TODO: maybe make this initial print/case sections their own functions
+		
 		std::cout << "*******************************" << std::endl;
 		std::cout << " 1 - Load File" << std::endl;
 		std::cout << " 2 - Quit." << std::endl;
 		std::cout << " Enter your choice and press return: ";
 
 		std::cin >> choice;
+		
 
 		Wav *wav = new Wav();
 
@@ -41,7 +44,7 @@ int main(int argc, char *argv[]) {
 				std::cout << "Enter Filename:";
 				std::cin >> filename;
 
-				std::cout << "Loading file.." << std::endl;
+				std::cout << "Loading file..." << std::endl;
 				try {
 					// TODO: add flow of effects processing
 

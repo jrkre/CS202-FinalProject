@@ -1,3 +1,7 @@
+/**
+ * This header file deals with the file entered by the user and takes necessary data from it to form the
+ * Wav class 
+ */
 #ifndef WAV_H
 #define WAV_H
 #include <vector>
@@ -19,6 +23,7 @@ class Wav {
 
     /**
      * Constructor that will instantiate a full Wav class from filename
+     * @param fileName - filename entered by user used to instantiate Wav class
      */
     Wav(const std::string &fileName);
     
@@ -26,7 +31,9 @@ class Wav {
      * 
      * Constructor that will take the neccessary data and form a new file
      * that can be saved to the filesystem
-     * 
+     * @param filename - filename entered by user 
+     * @param h - 
+     * @param buffer -
      */
     Wav(std::string filename, wavheader h, unsigned char *buffer);
 
@@ -34,13 +41,17 @@ class Wav {
     
     /**
      * readHeader() will read the contents of the header of the file and return them as a struct
+     * @param fileName - filename entered by user
      */
     wavheader readHeader(const std::string &fileName);
     /**
      * readFile() will read the contents of the file and put them in the buffer.
+     * @param fileName - filename entered by user
      */
     void readFile(const std::string &fileName);
-
+    /**
+     * getHeader() will get the header contents
+     */
     wavheader& getHeader();
     
 
