@@ -16,13 +16,22 @@ class Wav {
      * Default constructor
      */
     Wav();
+
     /**
      * Constructor that will instantiate a full Wav class from filename
      */
     Wav(const std::string &fileName);
+    
+    /**
+     * 
+     * Constructor that will take the neccessary data and form a new file
+     * that can be saved to the filesystem
+     * 
+     */
+    Wav(std::string filename, wavheader h, unsigned char *buffer);
 
-    unsigned char *buffer;
-
+    unsigned char *buffer [];
+    
     /**
      * readHeader() will read the contents of the header of the file and return them as a struct
      */

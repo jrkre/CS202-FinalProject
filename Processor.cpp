@@ -2,17 +2,18 @@
 
 
 
-void Processor::echo()
+
+Wav Processor::echo(Wav input)
 {
 
 }
 
-void Processor::normalization()
+Wav Processor::normalization(Wav input)
 {
 
 }
 
-void Processor::gainAdjust()
+Wav Processor::gainAdjust(Wav input)
 {
     
 }

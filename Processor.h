@@ -1,14 +1,15 @@
 #ifndef PROCESSOR_H
 #define PROCESSOR_H
+#include "Wav.h"
 
 class Processor {
 
 
 public:
 
-    static void normalization();
-    static void echo();
-    static void gainAdjust();
+    Wav normalization(Wav input);
+    Wav echo(Wav input);
+    Wav gainAdjust(Wav input);
 
 
 };

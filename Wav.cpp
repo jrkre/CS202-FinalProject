@@ -6,6 +6,7 @@ Wav::Wav()
 
 }
 
+
 Wav::Wav (const std::string &fileName)
 {
     Wav::fileName = fileName;
@@ -21,6 +22,7 @@ wavheader& Wav::getHeader()
 
 wavheader Wav::readHeader(const std::string &fileName)
 {
+    Wav::fileName = fileName;
     std::ifstream file(fileName, std::ios::binary | std::ios::in);
     wavheader header;
     if (file.is_open()) {
@@ -33,7 +35,9 @@ wavheader Wav::readHeader(const std::string &fileName)
 
 
 
-void Wav::readFile(const std::string &fileName){
+void Wav::readFile(const std::string &fileName)
+{
+    Wav::fileName = fileName;
     std::ifstream file(fileName, std::ios::binary | std::ios::in);
     if (file.is_open()) {
         auto header = readHeader(fileName);
