@@ -5,7 +5,7 @@
 
 Wav Processor::echo(Wav input)
 {
-
+    input.getBuffer();
 }
 
 Wav Processor::normalization(Wav input)

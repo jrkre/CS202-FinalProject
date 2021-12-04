@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 #include "Wav.h"
 #include "Processor.h"
 
@@ -19,6 +20,7 @@ int main(int argc, char *argv[]) {
 
 	int choice;
 	std::string filename;
+	std::string newFname;
 
 
 	bool wavProcess = true;
@@ -35,25 +37,31 @@ int main(int argc, char *argv[]) {
 
 		Wav *wav = new Wav();
 
+
 		switch (choice)
 		{
 			case 1:
 				std::cout << "Enter Filename:";
 				std::cin >> filename;
 
+				filename = "yes-8-bit-mono.wav";
+				newFname = "newFile.wav"; //TEMP
+
 				std::cout << "Loading file.." << std::endl;
 				try {
 					// TODO: add flow of effects processing
 
-					//wav = new Wav(filename);
-					wav->readHeader(filename);
-					wav->readFile(filename);
+					wav = new Wav(filename, newFname);
+					
+					wav->printBuffer();
 
+					
+					
 				}
-				catch(std::exception ex){
-					std::cout << "An exception occurred on opening the file." << std::endl;
+				catch(const std::exception ex){
+					std::cout << "An exception occurred on opening the file:" << ex.what() << std::endl;
 				}
-
+				
 				
 				wavProcess = false;
 				break;
