@@ -10,6 +10,8 @@ private:
 	std::string filename;
 	std::string newFname;
     bool wavProcess = true;
+    int processorChoice;
+    std::string outputFile;
 
 public:
 

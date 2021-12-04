@@ -14,6 +14,7 @@
 		std::cout << " 1 - Load File" << std::endl;
 		std::cout << " 2 - Quit." << std::endl;
 		std::cout << " Enter your choice and press return: ";
+        std::cout << "*******************************" << std::endl;
 
 		std::cin >> choice;
 		
@@ -50,8 +51,25 @@
 					std::cout << "An exception occurred on opening the file:" << ex.what() << std::endl;
                     
 				}
-				
-				
+				//display file metadata somewhere
+
+                std::cout<<"*******************************"<<std::endl;
+                std::cout<<"Processor Menu"<<std::endl;
+                std::cout<<"1. Normalization"<<std::endl;
+				std::cout<<"2. Echo"<<std::endl;
+                std::cout<<"3. Gain adjustment"<<std::endl;
+                std::cout<<"*******************************"<<std::endl;
+
+                std::cin >> processorChoice;
+                if(processorChoice != 0)
+                {
+                    std::cout<<"Output Filename?"<<std::endl;
+                    std::cin >> outputFile;
+                    //run processor
+                    //save file
+                    initialOptions();
+                }
+
 				wavProcess = false;
                 initialOptions();
 				break;
@@ -66,7 +84,6 @@
 				std::cout << "Not a Valid Choice." << std::endl;
 				std::cout << "Choose again." << std::endl;
 				std::cin >> choice;
-                initialOptions();
 				break;
 		}
 
