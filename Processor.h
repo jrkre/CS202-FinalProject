@@ -8,12 +8,13 @@
 
 class Processor {
 
+    int startOfFile = 44;
 
 public:
 
-    Wav normalization(Wav input);
+    Wav normalization(Wav &input);
     Wav echo(Wav input);
-    Wav gainAdjust(Wav input);
+    Wav gainAdjust(Wav &input, double scaleFactor);
 
 
 };

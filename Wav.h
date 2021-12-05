@@ -7,14 +7,17 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
+#include <cstring>
 #include "wavheader.h"
 
 class Wav {
 private:
     std::string fileName;
+    
+    //this is a workaround - should fix this at some point
     std::string newFile;
+
     wavheader header;
-    wavheader headerCopy;
     unsigned char *buffer;
 
 public:
@@ -42,6 +45,15 @@ public:
      */
     Wav(std::string filename, wavheader h, unsigned char *buffer);
 
+
+    /**
+     * 
+     * Construct a new Wav object from an existing wav and a new buffer
+     * 
+     * @param w 
+     * @param buffer 
+     */
+    Wav(Wav w, unsigned char *buffer);
     
     /**
      * readHeader() will read the contents of the header of the file and return them as a struct
@@ -57,9 +69,15 @@ public:
     void readFile(const std::string &fileName);
 
 
-    int getHeaderDB();
+    int getDataBytes();
+
+    wavheader getHeader();
 
     unsigned char* getBuffer();
+
+    std::string getFilename();
+
+    std::string getNewFName();
 
     //this function is just a sanity check
     void printBuffer();
@@ -78,7 +96,7 @@ public:
      * @param newFilename
      * 
      */
-    void saveFile(std::string &newFilename);
+    void saveFile();
 
 };
 

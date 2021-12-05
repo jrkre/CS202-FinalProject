@@ -1,47 +1,44 @@
 #include <iostream>
 #include "user.h"
-#include "Wav.h"
-#include "Processor.h"
 
 
+	User::User()
+	{
+		
+	}
 
     
 	void User::initialOptions()
     {	
         
-	    while (wavProcess != false) {
 		std::cout << "*******************************" << std::endl;
 		std::cout << " 1 - Load File" << std::endl;
 		std::cout << " 2 - Quit." << std::endl;
 		std::cout << " Enter your choice and press return: ";
-        std::cout << "*******************************" << std::endl;
 
-		std::cin >> choice;
-		
+		std::cin >> menuOption;
 
-		Wav *wav = new Wav();
-        }
     }
 
     void User::fileOptions()
     {
-		switch (choice)
+		switch (menuOption)
 		{
 			case 1:
 				std::cout << "Enter Filename:";
-				std::cin >> filename;
+				std::cin >> inputFilename;
 
-				filename = "yes-8-bit-mono.wav";
-				newFname = "newFile.wav"; //TEMP
+				
+				outputFile = "newFile.wav"; //TEMP
 
 				std::cout << "Loading file..." << std::endl;
 				try 
                 {
 					// TODO: add flow of effects processing
 
-					Wav *wav = new Wav(filename, newFname);
+					Wav *wav = new Wav(inputFilename, outputFile);
 					
-					wav->printBuffer();
+					wav->saveFile();
 
 					
 					
@@ -83,7 +80,7 @@
 			default:
 				std::cout << "Not a Valid Choice." << std::endl;
 				std::cout << "Choose again." << std::endl;
-				std::cin >> choice;
+				std::cin >> menuOption;
 				break;
 		}
 

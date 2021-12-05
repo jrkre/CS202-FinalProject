@@ -4,8 +4,8 @@ CXX_FLAGS = -g -Wall -std=c++11
 
 TARGET = wav_processor
 
-HEADERS = Wav.h Processor.h wavheader.h
-SRCS = Wav.cpp Processor.cpp main.cpp
+HEADERS = Wav.h Processor.h user.h wavheader.h
+SRCS = Wav.cpp Processor.cpp user.cpp main.cpp
 
 OBJECTS := $(patsubst %.cpp,%.o,$(SRCS))
 
