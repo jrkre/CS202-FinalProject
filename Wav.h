@@ -32,7 +32,7 @@ public:
      * Constructor that will instantiate a full Wav class from filename
      * @param fileName - filename entered by user used to instantiate Wav class
      */
-    Wav(const std::string &fileName, const std::string &newFileName);
+    Wav(const std::string &fileName);
     
 
     /**
@@ -68,6 +68,7 @@ public:
      */
     void readFile(const std::string &fileName);
 
+    void setOutFileName(const std::string &filename);
 
     int getDataBytes();
 

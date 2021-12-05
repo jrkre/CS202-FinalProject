@@ -3,10 +3,9 @@
 
 Wav::Wav(){}
 
-Wav::Wav (const std::string &fileName, const std::string &newFileName)
+Wav::Wav (const std::string &fileName)
 {
     Wav::fileName = fileName;
-    Wav::newFile = newFileName;
     readFile(fileName);
 }
 
@@ -24,6 +23,11 @@ Wav::Wav(Wav w, unsigned char *b)
     fileName = w.fileName;
     newFile = w.newFile;
 
+}
+
+void Wav::setOutFileName(const std::string &filename)
+{
+    Wav::newFile = filename;
 }
 
 int Wav::getDataBytes()

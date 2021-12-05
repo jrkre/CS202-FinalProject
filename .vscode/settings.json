@@ -81,6 +81,8 @@
     "ios": "cpp",
     "locale": "cpp",
     "optional": "cpp",
-    "stack": "cpp"
+    "stack": "cpp",
+    "hash_map": "cpp",
+    "valarray": "cpp"
   }
 }

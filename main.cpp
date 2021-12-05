@@ -22,8 +22,12 @@ int main(int argc, char *argv[]) {
 
 	User user = User();
 
-	user.initialOptions();
+	while (user.getStatus())
+	{
 
-	user.fileOptions();	
+		user.fileOptions();
+
+	}
+
 	return 0;
 } 
