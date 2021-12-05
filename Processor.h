@@ -13,7 +13,7 @@ class Processor {
 public:
 
     Wav normalization(Wav &input);
-    Wav echo(Wav input);
+    std::vector<float> echo(Wav &input, int delay, float gain);
     Wav gainAdjust(Wav &input, double scaleFactor);
 
 

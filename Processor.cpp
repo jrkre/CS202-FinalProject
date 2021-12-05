@@ -1,11 +1,23 @@
 #include "Processor.h"
 
 
-
-
-Wav Processor::echo(Wav input)
+std::vector<float> Processor::echo(Wav &input, int delay, float gain)
 {
-    input.getBuffer();
+	auto audio = input.getBuffer();
+	std::vector<float> output;
+
+	for (int i = startOfFile; i < input.getDataBytes(); i++)
+    {
+		if (i > delay) 
+		{
+			output.push_back(audio[i] + gain*output[i - delay]);
+		}
+		else 
+		{
+			output.push_back(audio[i]);
+		}
+    }
+	return output;
 }
 
 Wav Processor::normalization(Wav &input)
