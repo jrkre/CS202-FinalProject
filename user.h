@@ -22,6 +22,8 @@ private:
     //file being processed
     Wav* input;
 
+    Wav* output;
+
 public:
 
     /**
@@ -81,5 +83,5 @@ public:
     std::string getOutputFilename();
 
 
-    void process(int process);
+    Wav process(int process);
 };

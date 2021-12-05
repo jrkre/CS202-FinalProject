@@ -17,6 +17,7 @@ std::vector<float> Processor::echo(Wav &input, int delay, float gain)
 			output.push_back(audio[i]);
 		}
     }
+    
 	return output;
 }
 

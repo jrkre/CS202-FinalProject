@@ -1,4 +1,3 @@
-#include <iostream>
 #include "user.h"
 
 
@@ -31,10 +30,13 @@ void User::fileOptions()
             
 			if (!wavProcess)
 			{
-				printInitialOptions();
+				fileOptions();
 			}
 
-			int processor = selectProcessorOption();
+
+			*output = process(selectProcessorOption());
+			outputFile = getOutputFilename();
+			output->saveFile();
 
 			
 			break;
@@ -47,7 +49,7 @@ void User::fileOptions()
 		default:
 			std::cout << "Not a Valid Choice." << std::endl;
 			std::cout << "Choose again." << std::endl;
-			std::cin >> menuOption;
+			fileOptions();
 			break;
 	}
 }
@@ -153,19 +155,30 @@ std::string User::getOutputFilename()
 }
 
 
-void User::process(int process)
+Wav User::process(int process)
 {
 	Processor proc = Processor();
+
 	switch (process)
 	{
 	case 1:
-		proc.normalization(*input);
+		std::cout << "Applying normalization..." << std::endl;
+		return proc.normalization(*input);
 		break;
 	case 2:
-		proc.echo(*input);
+		//get params from user
+		std::cout << "Applying echo..." << std::endl;
+		//return proc.echo(*input);
+		break;
 	case 3:
-		proc.gainAdjust(*input, 1.5);
+		double scale;
+		std::cout << "Enter scale factor:";
+		std::cin >> scale;
+		std::cout << "Adjusting gain..." << std::endl;
+		return proc.gainAdjust(*input, scale);
+		break;
 	default:
+		std::cout << "Please enter a valid option";
 		break;
 	}
 }
