@@ -1,13 +1,8 @@
 #include <iostream>
 #include "user.h"
 
-
-	User::User()
-	{
-		
-	}
-
-    
+	User::User(){}
+ 
 	void User::initialOptions()
     {	
         
