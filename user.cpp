@@ -34,11 +34,13 @@ void User::fileOptions()
 			}
 
 
-			*output = process(selectProcessorOption());
-			outputFile = getOutputFilename();
-			output->saveFile();
+			output = process(selectProcessorOption());
+			output.setOutFileName(getOutputFilename());
+			output.saveFile();
 
-			
+
+			wavProcess = false;
+			return;
 			break;
 
 		case 0:

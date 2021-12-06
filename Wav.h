@@ -45,6 +45,8 @@ public:
      */
     Wav(std::string filename, wavheader h, unsigned char *buffer);
 
+    Wav(Wav w, std::vector<float> v);
+
 
     /**
      * 

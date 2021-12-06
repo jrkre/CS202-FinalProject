@@ -25,6 +25,19 @@ Wav::Wav(Wav w, unsigned char *b)
 
 }
 
+Wav::Wav(Wav w, std::vector<float> v)
+{
+    header = w.header;
+    w.header.data_bytes = v.size();
+    this->buffer = new unsigned char [v.size()];
+    for (int i = 0; i < v.size(); i++)
+    {
+        this->buffer[i] = v[i];
+    }
+    newFile = w.newFile;
+    fileName = w.fileName;
+}
+
 void Wav::setOutFileName(const std::string &filename)
 {
     Wav::newFile = filename;
@@ -118,14 +131,13 @@ void Wav::readFile(const std::string &fileName)
     Wav::fileName = fileName;
     std::ifstream file(fileName, std::ios::binary | std::ios::in);
     if (file.is_open()) {
-        /* wavheader openHeader;        
+        wavheader openHeader;        
         file.read((char*) &openHeader, sizeof(openHeader));
-        Wav::header = openHeader; */
-        Wav::header = readHeader(fileName);
+        Wav::header = openHeader;
+        //Wav::header = readHeader(fileName);
         Wav::buffer = new unsigned char[Wav::header.data_bytes];
         file.read((char*) buffer, Wav::header.data_bytes);
         file.close();
-
 
         //lancaster showed this line - im not entirely sure what it's doing
         //but it could be relevant to the audio processing and the little endian stuff
@@ -143,9 +155,10 @@ void Wav::saveFile()
 
     char* headerForFile = (char*)(&Wav::header);*/
     auto* shortBuffer = reinterpret_cast<char*>(Wav::buffer);
-
+    auto headerToWrite = Wav::header;
     //file.write(headerForFile, sizeof(Wav::header));
-    file.write(shortBuffer, header.data_bytes + 44);
+    file.write((char*)&headerToWrite, sizeof(headerToWrite));
+    file.write(shortBuffer, header.data_bytes);
     
     file.close();
 

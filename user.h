@@ -22,7 +22,7 @@ private:
     //file being processed
     Wav* input;
 
-    Wav* output;
+    Wav output;
 
 public:
 

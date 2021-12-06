@@ -1,7 +1,7 @@
 #include "Processor.h"
 
 
-std::vector<float> Processor::echo(Wav &input, int delay, float gain)
+Wav Processor::echo(Wav &input, int delay, float gain)
 {
 	auto audio = input.getBuffer();
 	std::vector<float> output;
@@ -18,7 +18,7 @@ std::vector<float> Processor::echo(Wav &input, int delay, float gain)
 		}
     }
     
-	return output;
+	return Wav(input, output);
 }
 
 Wav Processor::normalization(Wav &input)
@@ -49,7 +49,7 @@ Wav Processor::normalization(Wav &input)
         //std::cout << (int)audio [i] << std::endl;
     }
 
-    std::cout << "min: " << min << " max: " << max <<std::endl;
+    //std::cout << "min: " << min << " max: " << max <<std::endl;
 
 
     return Wav(input, audio);

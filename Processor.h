@@ -8,12 +8,12 @@
 
 class Processor {
 
-    int startOfFile = 44;
+    int startOfFile = 0;
 
 public:
 
+    Wav echo(Wav &input, int delay, float gain);
     Wav normalization(Wav &input);
-    std::vector<float> echo(Wav &input, int delay, float gain);
     Wav gainAdjust(Wav &input, double scaleFactor);
 
 
