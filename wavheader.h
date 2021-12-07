@@ -5,9 +5,6 @@
 #ifndef WAVHEADER_H
 #define WAVHEADER_H
 
-/**
- * Struct wavheader containing data elements of the wav header 
- */
 struct wavheader {
     // RIFF Header
     char riff_header[4]; // Contains "RIFF"
