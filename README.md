@@ -1,9 +1,9 @@
 # Semester Project
 **The base level project**
 
-**Zoe Roberts** - Documentation of project, Doxygen generation, UML diagram, Help with UI
-
 **Joshua Knight** - Outline of project, FILE IO components, UI & refactoring, Help with processing
+
+**Zoe Roberts** - Documentation of project, Doxygen generation, UML diagram, Help with UI
 
 **Aaron Bartee** - Help with UI & FILEIO, All processing components
 
