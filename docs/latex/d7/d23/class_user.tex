@@ -1,0 +1,109 @@
+\hypertarget{class_user}{}\doxysection{User Class Reference}
+\label{class_user}\index{User@{User}}
+
+
+{\ttfamily \#include $<$user.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_a4a0137053e591fbb79d9057dd7d2283d}{User}} ()
+\item 
+bool \mbox{\hyperlink{class_user_a1e59bc2556dd18c07d69d96e4b5e7e58}{get\+Status}} ()
+\item 
+void \mbox{\hyperlink{class_user_afbe932f619fdba9c59324e41f6406917}{print\+Initial\+Options}} ()
+\item 
+void \mbox{\hyperlink{class_user_ae588fa292ec89e268ee8e4f8b4175201}{file\+Options}} ()
+\item 
+void \mbox{\hyperlink{class_user_aa769cd499867f16d186ee265f8c902a3}{load\+File}} ()
+\item 
+void \mbox{\hyperlink{class_user_afb517d10ce8667fc155665a871fdea2b}{print\+File\+Info}} ()
+\item 
+int \mbox{\hyperlink{class_user_a44b3edfbffd16ebb063c34a15a49b1f8}{select\+Processor\+Option}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_user_a6be56254a60e815e98dc0b9713ac3440}{get\+Output\+Filename}} ()
+\item 
+\mbox{\hyperlink{class_wav}{Wav}} \mbox{\hyperlink{class_user_a56e513873792da100867ebc59d911a16}{process}} (int process)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the header file containg the \mbox{\hyperlink{class_user}{User}} class, which deals with all the UI for the program. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_user_a4a0137053e591fbb79d9057dd7d2283d}\label{class_user_a4a0137053e591fbb79d9057dd7d2283d}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_user_ae588fa292ec89e268ee8e4f8b4175201}\label{class_user_ae588fa292ec89e268ee8e4f8b4175201}} 
+\index{User@{User}!fileOptions@{fileOptions}}
+\index{fileOptions@{fileOptions}!User@{User}}
+\doxysubsubsection{\texorpdfstring{fileOptions()}{fileOptions()}}
+{\footnotesize\ttfamily void User\+::file\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_user_ae588fa292ec89e268ee8e4f8b4175201}{file\+Options()}} will prompt the user for a filename if chosen, check for errors opening the file, then present processor options to user. If user file doesn\textquotesingle{}t open, user chooses to exit, or an invalid choice is chosen, start menu reopens. \mbox{\Hypertarget{class_user_a6be56254a60e815e98dc0b9713ac3440}\label{class_user_a6be56254a60e815e98dc0b9713ac3440}} 
+\index{User@{User}!getOutputFilename@{getOutputFilename}}
+\index{getOutputFilename@{getOutputFilename}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getOutputFilename()}{getOutputFilename()}}
+{\footnotesize\ttfamily std\+::string User\+::get\+Output\+Filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_user_a6be56254a60e815e98dc0b9713ac3440}{get\+Output\+Filename()}} will get the output filename from the user \mbox{\Hypertarget{class_user_a1e59bc2556dd18c07d69d96e4b5e7e58}\label{class_user_a1e59bc2556dd18c07d69d96e4b5e7e58}} 
+\index{User@{User}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily bool User\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_user_a1e59bc2556dd18c07d69d96e4b5e7e58}{get\+Status()}} will get the status of the program for the main while loop \mbox{\Hypertarget{class_user_aa769cd499867f16d186ee265f8c902a3}\label{class_user_aa769cd499867f16d186ee265f8c902a3}} 
+\index{User@{User}!loadFile@{loadFile}}
+\index{loadFile@{loadFile}!User@{User}}
+\doxysubsubsection{\texorpdfstring{loadFile()}{loadFile()}}
+{\footnotesize\ttfamily void User\+::load\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_user_aa769cd499867f16d186ee265f8c902a3}{load\+File()}} will ask the user for a filename, and load the file into memory \mbox{\Hypertarget{class_user_afb517d10ce8667fc155665a871fdea2b}\label{class_user_afb517d10ce8667fc155665a871fdea2b}} 
+\index{User@{User}!printFileInfo@{printFileInfo}}
+\index{printFileInfo@{printFileInfo}!User@{User}}
+\doxysubsubsection{\texorpdfstring{printFileInfo()}{printFileInfo()}}
+{\footnotesize\ttfamily void User\+::print\+File\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_user_afb517d10ce8667fc155665a871fdea2b}{print\+File\+Info()}} will print all the necessary file information to the console
+
+filename
+
+sample rate
+
+bits per sample
+
+stereo or mono \mbox{\Hypertarget{class_user_afbe932f619fdba9c59324e41f6406917}\label{class_user_afbe932f619fdba9c59324e41f6406917}} 
+\index{User@{User}!printInitialOptions@{printInitialOptions}}
+\index{printInitialOptions@{printInitialOptions}!User@{User}}
+\doxysubsubsection{\texorpdfstring{printInitialOptions()}{printInitialOptions()}}
+{\footnotesize\ttfamily void User\+::print\+Initial\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+initial\+Options() will display the start menu to the user and take in the choice \mbox{\Hypertarget{class_user_a56e513873792da100867ebc59d911a16}\label{class_user_a56e513873792da100867ebc59d911a16}} 
+\index{User@{User}!process@{process}}
+\index{process@{process}!User@{User}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_wav}{Wav}} User\+::process (\begin{DoxyParamCaption}\item[{int}]{process }\end{DoxyParamCaption})}
+
+process will get the necessary details for processing from the user 
+\begin{DoxyParams}{Parameters}
+{\em process} & -\/ user\textquotesingle{}s processing choice \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_user_a44b3edfbffd16ebb063c34a15a49b1f8}\label{class_user_a44b3edfbffd16ebb063c34a15a49b1f8}} 
+\index{User@{User}!selectProcessorOption@{selectProcessorOption}}
+\index{selectProcessorOption@{selectProcessorOption}!User@{User}}
+\doxysubsubsection{\texorpdfstring{selectProcessorOption()}{selectProcessorOption()}}
+{\footnotesize\ttfamily int User\+::select\+Processor\+Option (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_user_a44b3edfbffd16ebb063c34a15a49b1f8}{select\+Processor\+Option()}} will present the user with options for processing and save their option 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+user.\+h\item 
+user.\+cpp\end{DoxyCompactItemize}

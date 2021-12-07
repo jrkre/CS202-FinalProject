@@ -1,0 +1,66 @@
+\hypertarget{class_processor}{}\doxysection{Processor Class Reference}
+\label{class_processor}\index{Processor@{Processor}}
+
+
+{\ttfamily \#include $<$Processor.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_wav}{Wav}} \mbox{\hyperlink{class_processor_a43c14801a96fd0c15f11e24b45e7934a}{echo}} (\mbox{\hyperlink{class_wav}{Wav}} \&input, int delay, float gain)
+\item 
+\mbox{\hyperlink{class_wav}{Wav}} \mbox{\hyperlink{class_processor_a1731f5cc7847dcc5513e608a37127d89}{normalization}} (\mbox{\hyperlink{class_wav}{Wav}} \&input)
+\item 
+\mbox{\hyperlink{class_wav}{Wav}} \mbox{\hyperlink{class_processor_ac1c34021b91e21bdae06526405460f30}{gain\+Adjust}} (\mbox{\hyperlink{class_wav}{Wav}} \&input, double scale\+Factor)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This header file deals with the processing aspects of the project The processors used on the \mbox{\hyperlink{class_wav}{Wav}} are normalization, echo, and gain adjustment 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_processor_a43c14801a96fd0c15f11e24b45e7934a}\label{class_processor_a43c14801a96fd0c15f11e24b45e7934a}} 
+\index{Processor@{Processor}!echo@{echo}}
+\index{echo@{echo}!Processor@{Processor}}
+\doxysubsubsection{\texorpdfstring{echo()}{echo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_wav}{Wav}} Processor\+::echo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_wav}{Wav}} \&}]{input,  }\item[{int}]{delay,  }\item[{float}]{gain }\end{DoxyParamCaption})}
+
+echo will copy and scale samples to add them at later points and create the echo effect 
+\begin{DoxyParams}{Parameters}
+{\em input} & -\/ input from file info. \\
+\hline
+{\em delay} & -\/ the delay \\
+\hline
+{\em gain} & -\/ the gain \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_processor_ac1c34021b91e21bdae06526405460f30}\label{class_processor_ac1c34021b91e21bdae06526405460f30}} 
+\index{Processor@{Processor}!gainAdjust@{gainAdjust}}
+\index{gainAdjust@{gainAdjust}!Processor@{Processor}}
+\doxysubsubsection{\texorpdfstring{gainAdjust()}{gainAdjust()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_wav}{Wav}} Processor\+::gain\+Adjust (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_wav}{Wav}} \&}]{input,  }\item[{double}]{scale\+Factor }\end{DoxyParamCaption})}
+
+gain\+Adjust will multiply samples by a scaling factor that raises or lowers the overall amplitude of the \mbox{\hyperlink{class_wav}{Wav}} file. 
+\begin{DoxyParams}{Parameters}
+{\em input} & -\/ input from file info. \\
+\hline
+{\em scale\+Factor} & -\/ the scaling factor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_processor_a1731f5cc7847dcc5513e608a37127d89}\label{class_processor_a1731f5cc7847dcc5513e608a37127d89}} 
+\index{Processor@{Processor}!normalization@{normalization}}
+\index{normalization@{normalization}!Processor@{Processor}}
+\doxysubsubsection{\texorpdfstring{normalization()}{normalization()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_wav}{Wav}} Processor\+::normalization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_wav}{Wav}} \&}]{input }\end{DoxyParamCaption})}
+
+normalization will scale the data so the largest sample value is the maximum possible value 
+\begin{DoxyParams}{Parameters}
+{\em input} & -\/ input from file info. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Processor.\+h\item 
+Processor.\+cpp\end{DoxyCompactItemize}

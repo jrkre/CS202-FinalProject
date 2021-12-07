@@ -62,7 +62,7 @@ public:
     /**
      * 
      * loadFile() will ask the user for a filename, and load the file
-     * into memory, 
+     * into memory
      * 
      */
     void loadFile();
@@ -76,12 +76,20 @@ public:
      */
     void printFileInfo();
 
-
+    /**
+     * selectProcessorOption() will present the user with options for processing
+     * and save their option
+     */
     int selectProcessorOption();
 
-
+    /**
+     * getOutputFilename() will get the output filename from the user
+     */
     std::string getOutputFilename();
 
-
+    /**
+     * process will get the necessary details for processing from the user
+     * @param process - user's processing choice
+     */
     Wav process(int process);
 };

@@ -18,6 +18,10 @@
  * 		return output in (new?) file
  * 
  */
+
+/**
+ * Our main runs the user interface
+ */
 int main(int argc, char *argv[]) {
 
 	User user = User();

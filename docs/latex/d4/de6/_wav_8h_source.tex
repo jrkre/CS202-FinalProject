@@ -1,0 +1,62 @@
+\hypertarget{_wav_8h_source}{}\doxysection{Wav.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef WAV\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define WAV\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <cstring>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}wavheader.h"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_wav}{Wav}} \{}
+\DoxyCodeLine{14 \textcolor{keyword}{private}:}
+\DoxyCodeLine{15     std::string fileName;}
+\DoxyCodeLine{16     }
+\DoxyCodeLine{17     \textcolor{comment}{//this is a workaround -\/ should fix this at some point}}
+\DoxyCodeLine{18     std::string newFile;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \mbox{\hyperlink{structwavheader}{wavheader}} header;}
+\DoxyCodeLine{21     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *buffer;}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{28     \mbox{\hyperlink{class_wav_abe9848ac7af353c82a78f00a600c18e6}{Wav}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 }
+\DoxyCodeLine{35     \mbox{\hyperlink{class_wav_abe9848ac7af353c82a78f00a600c18e6}{Wav}}(\textcolor{keyword}{const} std::string \&fileName);}
+\DoxyCodeLine{36     }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{46     \mbox{\hyperlink{class_wav_abe9848ac7af353c82a78f00a600c18e6}{Wav}}(std::string filename, \mbox{\hyperlink{structwavheader}{wavheader}} h, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *buffer);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{53     \mbox{\hyperlink{class_wav_abe9848ac7af353c82a78f00a600c18e6}{Wav}}(\mbox{\hyperlink{class_wav}{Wav}} w, std::vector<float> v);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 }
+\DoxyCodeLine{61     \mbox{\hyperlink{class_wav_abe9848ac7af353c82a78f00a600c18e6}{Wav}}(\mbox{\hyperlink{class_wav}{Wav}} w, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *buffer);}
+\DoxyCodeLine{62     }
+\DoxyCodeLine{67     \mbox{\hyperlink{structwavheader}{wavheader}} \mbox{\hyperlink{class_wav_a8ab3c71f9c0d44f65cf58edab0ff6bf0}{readHeader}}(\textcolor{keyword}{const} std::string \&fileName);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 }
+\DoxyCodeLine{74     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_wav_a1c4230cec49d30147a5b8a1950083f7c}{readFile}}(\textcolor{keyword}{const} std::string \&fileName);}
+\DoxyCodeLine{79     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_wav_a3f59ca8e67f0351c3694a55a81787a73}{setOutFileName}}(\textcolor{keyword}{const} std::string \&filename);}
+\DoxyCodeLine{83     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_wav_ab8070896649a7e5c5134b88bf9b0c424}{getDataBytes}}();}
+\DoxyCodeLine{87     \mbox{\hyperlink{structwavheader}{wavheader}} \mbox{\hyperlink{class_wav_a507997e4ed435e48421c3c47736b44fc}{getHeader}}();}
+\DoxyCodeLine{91     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_wav_a2daf07a90ed34789e3a1874973d9bd36}{getBuffer}}();}
+\DoxyCodeLine{95     std::string \mbox{\hyperlink{class_wav_a0a2208fd1a183449edc16f39aedacff6}{getFilename}}();}
+\DoxyCodeLine{99     std::string \mbox{\hyperlink{class_wav_a4bcea0350f055f42ce7042cc97aa85c5}{getNewFName}}();}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101     \textcolor{comment}{//this function is just a sanity check}}
+\DoxyCodeLine{102     \textcolor{keywordtype}{void} printBuffer();}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{107     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_wav_a2a576ecbeb1c70c7e135f680cdf51bbe}{verifyHeader}}();}
+\DoxyCodeLine{108     }
+\DoxyCodeLine{109 }
+\DoxyCodeLine{113     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_wav_aaa830cabff4926e5001b4f8889b69c77}{saveFile}}();}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 \};}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

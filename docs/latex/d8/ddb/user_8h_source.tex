@@ -1,0 +1,53 @@
+\hypertarget{user_8h_source}{}\doxysection{user.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Wav.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Processor.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_user}{User}} \{}
+\DoxyCodeLine{10 \textcolor{keyword}{private}:}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \textcolor{comment}{//0 or 1, indicates whether user wants to load a file or exit}}
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} menuOption;}
+\DoxyCodeLine{14     \textcolor{comment}{//filename entered by the user}}
+\DoxyCodeLine{15     std::string inputFilename;}
+\DoxyCodeLine{16     \textcolor{comment}{//indicates the status of the program}}
+\DoxyCodeLine{17     \textcolor{keywordtype}{bool} wavProcess;}
+\DoxyCodeLine{18     \textcolor{comment}{//processor option, 1, 2 or 3}}
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} processorChoice;}
+\DoxyCodeLine{20     \textcolor{comment}{//filename of the outputted file}}
+\DoxyCodeLine{21     std::string outputFile;}
+\DoxyCodeLine{22     \textcolor{comment}{//file being processed}}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_wav}{Wav}}* input;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \mbox{\hyperlink{class_wav}{Wav}} output;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{34     \mbox{\hyperlink{class_user_a4a0137053e591fbb79d9057dd7d2283d}{User}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_user_a1e59bc2556dd18c07d69d96e4b5e7e58}{getStatus}}();}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_user_afbe932f619fdba9c59324e41f6406917}{printInitialOptions}}();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 }
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_user_ae588fa292ec89e268ee8e4f8b4175201}{fileOptions}}();}
+\DoxyCodeLine{60     }
+\DoxyCodeLine{61 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_user_aa769cd499867f16d186ee265f8c902a3}{loadFile}}();}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 }
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_user_afb517d10ce8667fc155665a871fdea2b}{printFileInfo}}();}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{83     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_user_a44b3edfbffd16ebb063c34a15a49b1f8}{selectProcessorOption}}();}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{88     std::string \mbox{\hyperlink{class_user_a6be56254a60e815e98dc0b9713ac3440}{getOutputFilename}}();}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{94     \mbox{\hyperlink{class_wav}{Wav}} \mbox{\hyperlink{class_user_a56e513873792da100867ebc59d911a16}{process}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_user_a56e513873792da100867ebc59d911a16}{process}});}
+\DoxyCodeLine{95 \};}
+
+\end{DoxyCode}
