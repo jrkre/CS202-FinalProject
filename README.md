@@ -5,7 +5,7 @@
 
 **Joshua Knight** - Outline of project, FILE IO components, UI & refactoring, Help with processing
 
-**Aaron Bartee** - Help with UI & FILEIO, All processing componenets
+**Aaron Bartee** - Help with UI & FILEIO, All processing components
 
 **UML**:
 
