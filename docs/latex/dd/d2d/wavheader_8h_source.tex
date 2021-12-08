@@ -5,28 +5,28 @@
 \DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef WAVHEADER\_H}}
 \DoxyCodeLine{6 \textcolor{preprocessor}{\#define WAVHEADER\_H}}
 \DoxyCodeLine{7 }
-\DoxyCodeLine{11 \textcolor{keyword}{struct }\mbox{\hyperlink{structwavheader}{wavheader}} \{}
-\DoxyCodeLine{12     \textcolor{comment}{// RIFF Header}}
-\DoxyCodeLine{13     \textcolor{keywordtype}{char} riff\_header[4]; \textcolor{comment}{// Contains "{}RIFF"{}}}
-\DoxyCodeLine{14     \textcolor{keywordtype}{int} wav\_size; \textcolor{comment}{// Size of the wav portion of the file, which follows the first 8 bytes. File size -\/ 8}}
-\DoxyCodeLine{15     \textcolor{keywordtype}{char} wave\_header[4]; \textcolor{comment}{// Contains "{}WAVE"{}}}
-\DoxyCodeLine{16     }
-\DoxyCodeLine{17     \textcolor{comment}{// Format Header}}
-\DoxyCodeLine{18     \textcolor{keywordtype}{char} fmt\_header[4]; \textcolor{comment}{// Contains "{}fmt "{} (includes trailing space)}}
-\DoxyCodeLine{19     \textcolor{keywordtype}{int} fmt\_chunk\_size; \textcolor{comment}{// Should be 16 for PCM}}
-\DoxyCodeLine{20     \textcolor{keywordtype}{short} audio\_format; \textcolor{comment}{// Should be 1 for PCM. 3 for IEEE Float}}
-\DoxyCodeLine{21     \textcolor{keywordtype}{short} num\_channels;}
-\DoxyCodeLine{22     \textcolor{keywordtype}{int} sample\_rate;}
-\DoxyCodeLine{23     \textcolor{keywordtype}{int} byte\_rate; \textcolor{comment}{// Number of bytes per second. sample\_rate * num\_channels * Bytes Per Sample}}
-\DoxyCodeLine{24     \textcolor{keywordtype}{short} sample\_alignment; \textcolor{comment}{// num\_channels * Bytes Per Sample}}
-\DoxyCodeLine{25     \textcolor{keywordtype}{short} bit\_depth; \textcolor{comment}{// Number of bits per sample}}
-\DoxyCodeLine{26     }
-\DoxyCodeLine{27     \textcolor{comment}{// Data}}
-\DoxyCodeLine{28     \textcolor{keywordtype}{char} data\_header[4]; \textcolor{comment}{// Contains "{}data"{}}}
-\DoxyCodeLine{29     \textcolor{keywordtype}{int} data\_bytes; \textcolor{comment}{// Number of bytes in data. Number of samples * num\_channels * sample byte size}}
-\DoxyCodeLine{30     \textcolor{comment}{// uint8\_t bytes[]; // Remainder of wave file is bytes}}
-\DoxyCodeLine{31 \};}
-\DoxyCodeLine{32 }
-\DoxyCodeLine{33 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{8 \textcolor{keyword}{struct }\mbox{\hyperlink{structwavheader}{wavheader}} \{}
+\DoxyCodeLine{9     \textcolor{comment}{// RIFF Header}}
+\DoxyCodeLine{10     \textcolor{keywordtype}{char} riff\_header[4]; \textcolor{comment}{// Contains "{}RIFF"{}}}
+\DoxyCodeLine{11     \textcolor{keywordtype}{int} wav\_size; \textcolor{comment}{// Size of the wav portion of the file, which follows the first 8 bytes. File size -\/ 8}}
+\DoxyCodeLine{12     \textcolor{keywordtype}{char} wave\_header[4]; \textcolor{comment}{// Contains "{}WAVE"{}}}
+\DoxyCodeLine{13     }
+\DoxyCodeLine{14     \textcolor{comment}{// Format Header}}
+\DoxyCodeLine{15     \textcolor{keywordtype}{char} fmt\_header[4]; \textcolor{comment}{// Contains "{}fmt "{} (includes trailing space)}}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} fmt\_chunk\_size; \textcolor{comment}{// Should be 16 for PCM}}
+\DoxyCodeLine{17     \textcolor{keywordtype}{short} audio\_format; \textcolor{comment}{// Should be 1 for PCM. 3 for IEEE Float}}
+\DoxyCodeLine{18     \textcolor{keywordtype}{short} num\_channels;}
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} sample\_rate;}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} byte\_rate; \textcolor{comment}{// Number of bytes per second. sample\_rate * num\_channels * Bytes Per Sample}}
+\DoxyCodeLine{21     \textcolor{keywordtype}{short} sample\_alignment; \textcolor{comment}{// num\_channels * Bytes Per Sample}}
+\DoxyCodeLine{22     \textcolor{keywordtype}{short} bit\_depth; \textcolor{comment}{// Number of bits per sample}}
+\DoxyCodeLine{23     }
+\DoxyCodeLine{24     \textcolor{comment}{// Data}}
+\DoxyCodeLine{25     \textcolor{keywordtype}{char} data\_header[4]; \textcolor{comment}{// Contains "{}data"{}}}
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} data\_bytes; \textcolor{comment}{// Number of bytes in data. Number of samples * num\_channels * sample byte size}}
+\DoxyCodeLine{27     \textcolor{comment}{// uint8\_t bytes[]; // Remainder of wave file is bytes}}
+\DoxyCodeLine{28 \};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}
