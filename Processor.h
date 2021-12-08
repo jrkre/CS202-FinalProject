@@ -15,10 +15,10 @@ public:
 /**
  * echo will copy and scale samples to add them at later points and create the echo effect
  * @param input - input from file info.
- * @param delay - the delay 
- * @param gain - the gain
+ * @param seconds - the delay in seconds
+ * @param gain - the gain of delay
  */
-    Wav echo(Wav &input, int delay, float gain);
+    Wav echo(Wav &input, double seconds, float gain);
 /**
  * normalization will scale the data so the largest sample value is the maximum possible value
  * @param input - input from file info.

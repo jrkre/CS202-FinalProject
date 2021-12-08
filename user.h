@@ -54,9 +54,10 @@ public:
      * fileOptions() will prompt the user for a filename if chosen, check for errors opening the file, then 
      * present processor options to user.
      * If user file doesn't open, user chooses to exit, or an invalid choice is chosen, start menu reopens.
+     * @param file - filename if the user enters it before starting the program
      * 
      */
-    void fileOptions();
+    void fileOptions(std::string file);
     
 
     /**
@@ -83,7 +84,9 @@ public:
     int selectProcessorOption();
 
     /**
+     * 
      * getOutputFilename() will get the output filename from the user
+     * 
      */
     std::string getOutputFilename();
 

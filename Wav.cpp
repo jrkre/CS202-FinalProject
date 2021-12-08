@@ -28,14 +28,15 @@ Wav::Wav(Wav w, unsigned char *b)
 Wav::Wav(Wav w, std::vector<float> v)
 {
     header = w.header;
+    newFile = w.newFile;
+    fileName = w.fileName;
     w.header.data_bytes = v.size();
     this->buffer = new unsigned char [v.size()];
     for (int i = 0; i < v.size(); i++)
     {
         this->buffer[i] = v[i];
     }
-    newFile = w.newFile;
-    fileName = w.fileName;
+    
 }
 
 void Wav::setOutFileName(const std::string &filename)

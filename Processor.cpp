@@ -1,8 +1,9 @@
 #include "Processor.h"
 
 
-Wav Processor::echo(Wav &input, int delay, float gain)
+Wav Processor::echo(Wav &input, double seconds, float gain)
 {
+    int delay = seconds * input.getHeader().sample_rate;
 	auto audio = input.getBuffer();
 	std::vector<float> output;
 

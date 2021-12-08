@@ -26,10 +26,21 @@ int main(int argc, char *argv[]) {
 
 	User user = User();
 
+	std::string input;
+	if (argc > 1) 
+	{
+		input = argv[1];
+	}
+	else 
+	{
+		input = "";
+	}
+	
+
 	while (user.getStatus())
 	{
 
-		user.fileOptions();
+		user.fileOptions(input);
 
 	}
 
